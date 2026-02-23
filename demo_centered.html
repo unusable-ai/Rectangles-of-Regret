@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SVG Demo</title>
+  <style>
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      background: #000;
+      overflow: hidden;
+    }
+    .wrap {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      place-items: center;
+    }
+    /* Keep aspect, fit to viewport */
+    .wrap svg {
+      width: min(92vw, calc(92vh * (16/9)));
+      height: auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <img src="out.svg" alt="SVG Demo" />
+  </div>
+</body>
+</html>
